@@ -42,13 +42,13 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            podcast_guest = podcast_info.get('podcast_guest', {})
-            guest_name = podcast_guest.get('name', "N/A")
-        
+            guest_name = podcast_info['podcast_guest']['name'] if podcast_info['podcast_guest'] else "No Guest Name"
+            st.write(guest_name)
+
         with col4:
             st.subheader("Podcast Guest Details")
-            podcast_guest = podcast_info.get('podcast_guest', {})
-            guest_summary = podcast_guest.get('summary', "N/A")
+            guest_summary = podcast_info['podcast_guest']['summary'] if podcast_info['podcast_guest'] else "No Guest Summary"
+            st.write(guest_summary) 
 
         # Display the five key moments
         st.subheader("Key Moments")
@@ -92,14 +92,14 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            podcast_guest = podcast_info.get('podcast_guest', {})
-            guest_name = podcast_guest.get('name', "N/A")
-        
+            guest_name = podcast_info['podcast_guest']['name'] if podcast_info['podcast_guest'] else "No Guest Name"
+            st.write(guest_name)
+
         with col4:
             st.subheader("Podcast Guest Details")
-            podcast_guest = podcast_info.get('podcast_guest', {})
-            guest_summary = podcast_guest.get('summary', "N/A")
-        
+            guest_summary = podcast_info['podcast_guest']['summary'] if podcast_info['podcast_guest'] else "No Guest Summary"
+            st.write(guest_summary) 
+
         # Display the five key moments
         st.subheader("Key Moments")
         key_moments = podcast_info['podcast_highlights']
