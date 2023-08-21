@@ -42,11 +42,11 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            guest_name = podcast_info['podcast_guest']['name'] if podcast_info['podcast_guest']
-            
+            st.write(podcast_info['podcast_guest']['name'])
+
         with col4:
             st.subheader("Podcast Guest Details")
-            guest_summary = podcast_info['podcast_guest']['summary'] if podcast_info['podcast_guest']
+            st.write(podcast_info["podcast_guest"]['summary'])
 
         # Display the five key moments
         st.subheader("Key Moments")
@@ -57,7 +57,7 @@ def main():
 
     # User Input box
     st.sidebar.subheader("Add and Process New Podcast Feed")
-    url = st.sidebar.text_input("Link to RSS Feed (podcast under 30 minutes only)")
+    url = st.sidebar.text_input("Link to RSS Feed")
 
     process_button = st.sidebar.button("Process Podcast Feed")
     st.sidebar.markdown("**Note**: Podcast processing can take upto 5 mins, please be patient.")
@@ -90,11 +90,11 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            guest_name = podcast_info['podcast_guest']['name'] if podcast_info['podcast_guest']
+            st.write(podcast_info['podcast_guest']['name'])
 
         with col4:
             st.subheader("Podcast Guest Details")
-            guest_summary = podcast_info['podcast_guest']['summary'] if podcast_info['podcast_guest']
+            st.write(podcast_info["podcast_guest"]['summary'])
 
         # Display the five key moments
         st.subheader("Key Moments")
