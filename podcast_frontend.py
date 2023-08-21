@@ -42,13 +42,20 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            guest_name = podcast_info['podcast_guest']['name'] if podcast_info['podcast_guest'] else "No Guest Name"
+            if 'podcast_guest' in podcast_info and 'name' in podcast_info['podcast_guest']:
+                guest_name = podcast_info['podcast_guest']['name']
+            else:
+                guest_name = "No Guest Name"
             st.write(guest_name)
-
+        
         with col4:
             st.subheader("Podcast Guest Details")
-            guest_summary = podcast_info['podcast_guest']['summary'] if podcast_info['podcast_guest'] else "No Guest Summary"
-            st.write(guest_summary) 
+            if 'podcast_guest' in podcast_info and 'summary' in podcast_info['podcast_guest']:
+                guest_summary = podcast_info['podcast_guest']['summary']
+            else:
+                guest_summary = "No Guest Summary"
+            st.write(guest_summary)
+
 
         # Display the five key moments
         st.subheader("Key Moments")
@@ -92,13 +99,20 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            guest_name = podcast_info['podcast_guest']['name'] if podcast_info['podcast_guest'] else "No Guest Name"
+            if 'podcast_guest' in podcast_info and 'name' in podcast_info['podcast_guest']:
+                guest_name = podcast_info['podcast_guest']['name']
+            else:
+                guest_name = "No Guest Name"
             st.write(guest_name)
-
+        
         with col4:
             st.subheader("Podcast Guest Details")
-            guest_summary = podcast_info['podcast_guest']['summary'] if podcast_info['podcast_guest'] else "No Guest Summary"
-            st.write(guest_summary) 
+            if 'podcast_guest' in podcast_info and 'summary' in podcast_info['podcast_guest']:
+                guest_summary = podcast_info['podcast_guest']['summary']
+            else:
+                guest_summary = "No Guest Summary"
+            st.write(guest_summary)
+
 
         # Display the five key moments
         st.subheader("Key Moments")
