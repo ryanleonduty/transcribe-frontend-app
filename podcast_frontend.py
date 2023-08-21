@@ -42,13 +42,14 @@ def main():
 
         with col3:
             st.subheader("Podcast Guest")
-            podcast_guest = podcast_info.get('podcast_guest', None)
-            guest_name = podcast_guest['name'] if podcast_guest else "N/A"
+            podcast_guest = podcast_info.get('podcast_guest', {})
+            guest_name = podcast_guest.get('name', "N/A")
 
         with col4:
             st.subheader("Podcast Guest Details")
-            podcast_guest = podcast_info.get('podcast_guest', None)
-            guest_summary = podcast_guest['summary'] if podcast_guest else "N/A"
+            podcast_guest = podcast_info.get('podcast_guest', {})
+            guest_summary = podcast_guest.get('summary', "N/A")
+
 
         # Display the five key moments
         st.subheader("Key Moments")
