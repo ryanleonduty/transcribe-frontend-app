@@ -44,15 +44,16 @@ def main():
             st.subheader("Podcast Guest")
             try:
                 guest_name = podcast_info['podcast_guest']['name']
-        except KeyError:
+            except KeyError:
                 guest_name = "N/A"
-
+        
         with col4:
             st.subheader("Podcast Guest Details")
             try:
                 guest_summary = podcast_info['podcast_guest']['summary']
-        except KeyError:
-            guest_summary = "N/A"
+            except KeyError:
+                guest_summary = "N/A"
+
 
         # Display the five key moments
         st.subheader("Key Moments")
